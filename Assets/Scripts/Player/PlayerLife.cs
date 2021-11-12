@@ -26,6 +26,16 @@ public class PlayerLife : MonoBehaviour
         }
     }
 
+    public float getCurrentHealth()
+    {
+        return currentHealth;
+    }
+
+    public void setCurrentHealth(float newVal)
+    {
+        currentHealth = newVal;
+    }
+
     // Update is called once per frame
     void Update()
     {
