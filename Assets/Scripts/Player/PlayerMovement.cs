@@ -16,9 +16,6 @@ public class PlayerMovement : MonoBehaviour
 
     private void Update()
     {
-        //Save & Load
-        if (Input.GetButtonDown(""))
-
         //Player Movement
         float x = Input.GetAxis("Horizontal");
         float z = Input.GetAxis("Vertical");
@@ -31,9 +28,9 @@ public class PlayerMovement : MonoBehaviour
             else
             {
                 move = transform.right * x * 0.75f + transform.forward * z;
-            }            
+            }
         }
-        controller.Move(move * movementSpeed * Time.deltaTime);
+        controller.Move(move * movementSpeed * Time.deltaTime);      
 
         //Gravity
         if (!controller.isGrounded)
