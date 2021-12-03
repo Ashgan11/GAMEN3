@@ -18,10 +18,7 @@ public class PlayerSave : MonoBehaviour
 
         life.setCurrentHealth(data.health);
 
-        Vector3 position;
-        position.x = data.position[0];
-        position.y = data.position[1];
-        position.z = data.position[2];
+        Vector3 position = data.position;
 
         controller.transform.position = position;
     }

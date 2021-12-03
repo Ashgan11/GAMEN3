@@ -24,6 +24,12 @@ public class PlayerLife : MonoBehaviour
             currentHealth += delta;
             slider.value = currentHealth;
         }
+        else if (currentHealth + delta > maxHealth) {
+            currentHealth = maxHealth;
+        }
+        else {
+            currentHealth = 0;
+        }
     }
 
     public float getCurrentHealth()
