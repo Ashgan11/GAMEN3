@@ -1248,7 +1248,7 @@ GameObject:
   - component: {fileID: 1600158207}
   m_Layer: 0
   m_Name: PlayerCharacter
-  m_TagString: Untagged
+  m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1334,7 +1334,7 @@ MonoBehaviour:
     m_Bits: 64
   excludeLayerName: 
   openDoorKey: 323
-  crosshair: {fileID: 0}
+  crosshair: {fileID: 2088035392}
 --- !u!1 &1623677089
 GameObject:
   m_ObjectHideFlags: 0

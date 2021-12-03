@@ -29,7 +29,7 @@ public class DoorRayCast : MonoBehaviour
         if (Physics.Raycast(transform.position, fwd, out hit, rayLength, mask))
         {
             if (hit.collider.CompareTag(interactableTag))
-            {
+            {                
                 if (!doOnce)
                 {
                     raycastObj = hit.collider.gameObject.GetComponent<DoorController>();
@@ -50,7 +50,7 @@ public class DoorRayCast : MonoBehaviour
         {
             if (isCrosshairActive)
             {
-                CrosshairChange(false);
+                CrosshairChange(false);              
                 doOnce = false;
             }
         }
@@ -59,7 +59,7 @@ public class DoorRayCast : MonoBehaviour
     void CrosshairChange(bool on)
     {
         if (on && !doOnce)
-        {
+        {            
             crosshair.color = Color.red;
         }
         else
