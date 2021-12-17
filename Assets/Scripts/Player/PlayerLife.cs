@@ -40,6 +40,7 @@ public class PlayerLife : MonoBehaviour
     public void setCurrentHealth(float newVal)
     {
         currentHealth = newVal;
+        slider.value = currentHealth;
     }
 
     // Update is called once per frame

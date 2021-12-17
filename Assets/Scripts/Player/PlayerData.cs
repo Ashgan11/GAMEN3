@@ -6,17 +6,12 @@ using UnityEngine;
 public class PlayerData
 {
     public float health;
-    public Vector3 position;
+    public float[] position;
 
-    public PlayerData(PlayerLife life, CharacterController controller)
+    public PlayerData(float life, float[] position)
     {
-        health = life.getCurrentHealth();
+        health = life;
 
-        position = new Vector3
-        (
-            controller.transform.position.x, 
-            controller.transform.position.y, 
-            controller.transform.position.z
-        );
+        this.position = position;
     }
 }

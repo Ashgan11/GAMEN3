@@ -9,7 +9,9 @@ public class PlayerSave : MonoBehaviour
     
     public void SavePlayer()
     {
-        SaveSystem.SavePlayer(life, controller);
+        float[] positionArr = {controller.transform.position.x, controller.transform.position.y, controller.transform.position.z};
+
+        SaveSystem.SavePlayer(life.getCurrentHealth(), positionArr);
     }
 
     public void LoadPlayer()
@@ -18,8 +20,20 @@ public class PlayerSave : MonoBehaviour
 
         life.setCurrentHealth(data.health);
 
-        Vector3 position = data.position;
+        Quaternion rot = controller.transform.rotation;
+        Vector3 pos = new Vector3(data.position[0], data.position[1], data.position[2]);
+        controller.enabled = false;
+        controller.transform.SetPositionAndRotation(pos, rot);
+        controller.enabled = true;
+    }
 
-        controller.transform.position = position;
+    void Update()
+    {
+        if(Input.GetKeyDown(KeyCode.F5)){
+            SavePlayer();
+        }
+        else if(Input.GetKeyDown(KeyCode.F6)){
+            LoadPlayer();
+        }
     }
 }
