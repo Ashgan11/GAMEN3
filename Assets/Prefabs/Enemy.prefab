@@ -63,7 +63,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 69b7e9e5c53b99343a7428d7b1b0dc79, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  bullet: {fileID: 5701355217856476413, guid: ca04e3cee00a5d646aa82ede50fe29a6, type: 3}
   speed: 100
+  attackSpeed: 1
+  moveInterval: 6
 --- !u!136 &8494445899335647507
 CapsuleCollider:
   m_ObjectHideFlags: 0

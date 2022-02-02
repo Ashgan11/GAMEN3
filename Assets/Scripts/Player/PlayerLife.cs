@@ -17,7 +17,7 @@ public class PlayerLife : MonoBehaviour
         slider.value    = currentHealth;
     }
 
-    void changeHealth(float delta)
+    public void changeHealth(float delta)
     {
         if (currentHealth + delta <= maxHealth && currentHealth + delta >= 0)
         {
